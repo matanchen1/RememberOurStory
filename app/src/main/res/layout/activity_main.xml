@@ -31,21 +31,20 @@
         app:layout_constraintEnd_toEndOf="@+id/heroism_intro_image"
         app:layout_constraintStart_toStartOf="@+id/heroism_intro_image"
         app:layout_constraintTop_toBottomOf="@+id/heroism_intro_image" />
-
     <TextView
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="24dp"
-        android:layoutDirection="rtl"
-        android:text="The Parade of Heroism is a national educational project to transfer the memory of the Holocaust from the passive to the active, Annette wants to convey our past stories, from a worldview that must put the person at the center, and strengthen the image of survivors and perished as heroes. Because heroism is everywhere, and especially in everyday and small deeds"
+        android:text="היי לכולם צוות 17 אלופים"
         android:textColorHighlight="#FFEB3B"
         android:textColorLink="#FFC107"
-        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintBottom_toTopOf="@+id/letsStartBtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/about_us" />
+
 
     <Button
         android:id="@+id/letsStartBtn"

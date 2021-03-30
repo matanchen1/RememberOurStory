@@ -16,6 +16,7 @@
         android:outlineAmbientShadowColor="#FFFFFF"
         android:visibility="invisible">
 
+
     </com.google.android.material.appbar.AppBarLayout>
 
     <FrameLayout
@@ -45,7 +46,7 @@
         android:id="@+id/barText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="תוצאות חיפוש"
+        android:text="בחר גיבור"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         app:layout_anchor="@+id/Sfilters"
         app:layout_anchorGravity="center"
@@ -54,5 +55,12 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <Button
+        android:id="@+id/returBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="חזור"
+        style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+        />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
