@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">RememberOurStory</string>
+    <string name="title_activity_heros_item_list">title_activity_heros_item_list</string>
     <string name="createacount">Create Acount</string>
     <string name="firstname">First Name</string>
     <string name="lastName">Last Name</string>
