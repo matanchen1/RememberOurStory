@@ -9,10 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.RememberOurStory">
+        <activity android:name=".StoryActivity"></activity>
         <activity
             android:name=".HeroesItemListActivity"
             android:label="@string/title_activity_heros_item_list"
-            android:theme="@style/Theme.RememberOurStory.NoActionBar"></activity>
+            android:theme="@style/Theme.RememberOurStory.NoActionBar" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,7 +21,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ItemListActivity"></activity>
+        <activity android:name=".ItemListActivity" />
     </application>
 
 </manifest>
