@@ -56,8 +56,10 @@
         android:layout_marginEnd="135dp"
         android:layout_marginRight="135dp"
         android:layout_marginBottom="42dp"
-        android:text="@string/notificationHeadline"
+        android:fontFamily="@font/rubik_bold"
+        android:text="סיפורו של מוישה"
         android:textAppearance="@style/createHeadlineAppearance"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="@+id/ellipse_59"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -138,7 +140,8 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/ellipse_59"
         app:layout_constraintTop_toTopOf="@+id/ellipse_59"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.0"
+        android:fontFamily="@font/rubik" />
 
     <TextView
         android:id="@+id/time_text"
@@ -446,7 +449,10 @@
         app:layout_constraintStart_toStartOf="@+id/expandBox2"
         app:layout_constraintTop_toTopOf="@+id/expandBox2"
         android:elevation="1dp"
+        android:fontFamily="@font/rubik"
         />
+
+
 
     <!--   <ImageView
            android:id="@+id/location_icon"
@@ -512,6 +518,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="665dp"
         android:background="@drawable/ic_letsvolunteer"
+        android:text="שתף לסטורי של האינסטגרם"
         android:clickable="true"
         android:onClick="letsVolunteer"
         app:layout_constraintEnd_toEndOf="parent"
