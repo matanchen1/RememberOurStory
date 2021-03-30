@@ -63,7 +63,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/ellipse_59" />
 
-    <View
+<!--    <View
         android:id="@+id/expandBox1"
         android:layout_width="327dp"
         android:layout_height="122dp"
@@ -77,17 +77,17 @@
         android:background="@drawable/expandbox"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/ellipse_59" />
+        app:layout_constraintTop_toBottomOf="@id/ellipse_59" />-->
 
     <View
         android:id="@+id/expandedBox1"
-        android:layout_width="327dp"
-        android:layout_height="217dp"
+        android:layout_width="250dp"
+        android:layout_height="444dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="18dp"
         android:layout_marginLeft="18dp"
-        android:layout_marginTop="42dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="15dp"
         android:layout_marginRight="15dp"
         android:background="@drawable/ic_expandedbox"
@@ -95,26 +95,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/ellipse_59" />
 
-    <ImageView
-        android:id="@+id/time_icon"
-        android:layout_width="20dp"
-        android:layout_height="20dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginTop="17dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginBottom="85dp"
-        android:src="@drawable/time_line_black"
-        android:elevation="1dp"
-        app:layout_constraintBottom_toBottomOf="@+id/expandBox1"
-        app:layout_constraintEnd_toEndOf="@+id/expandBox1"
-        app:layout_constraintHorizontal_bias="0.818"
-        app:layout_constraintStart_toStartOf="@+id/time_headline"
-        app:layout_constraintTop_toTopOf="@+id/expandBox1"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <Button
+    <!--    <Button
         android:id="@+id/expandButton"
         android:layout_width="40dp"
         android:layout_height="40dp"
@@ -130,28 +111,34 @@
         app:layout_constraintEnd_toEndOf="@+id/expandBox1"
         app:layout_constraintStart_toStartOf="@+id/expandBox1"
         app:layout_constraintTop_toTopOf="@+id/expandBox1"
-        android:elevation="1dp"/>
+        android:elevation="1dp"/>-->
+
+    <!--        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ellipse_59" />-->
+
 
     <TextView
         android:id="@+id/time_headline"
-        android:elevation="1dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:text="@string/time_headline"
-        android:layout_marginStart="218dp"
-        android:layout_marginLeft="218dp"
-        android:layout_marginTop="17dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="41dp"
         android:layout_marginRight="41dp"
         android:layout_marginBottom="85dp"
-        android:textAppearance="@style/headline"
+        android:elevation="1dp"
         android:gravity="right|center_vertical"
-        app:layout_constraintBottom_toBottomOf="@+id/expandBox1"
-        app:layout_constraintEnd_toEndOf="@+id/expandBox1"
-        app:layout_constraintStart_toStartOf="@+id/expandBox1"
-        app:layout_constraintTop_toTopOf="@+id/expandBox1"/>
+        android:text="@string/time_headline"
+        android:textAppearance="@style/headline"
+        app:layout_constraintBottom_toBottomOf="@+id/ellipse_59"
+        app:layout_constraintEnd_toEndOf="@+id/ellipse_59"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/ellipse_59"
+        app:layout_constraintTop_toTopOf="@+id/ellipse_59"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/time_text"
@@ -170,10 +157,10 @@
         android:textAppearance="@style/text"
         android:lineSpacingExtra="1sp"
         android:gravity="right|center_vertical"
-        app:layout_constraintBottom_toBottomOf="@+id/expandBox1"
-        app:layout_constraintEnd_toEndOf="@+id/expandBox1"
-        app:layout_constraintStart_toStartOf="@+id/expandBox1"
-        app:layout_constraintTop_toTopOf="@+id/expandBox1"
+        app:layout_constraintBottom_toBottomOf="@+id/expandBox2"
+        app:layout_constraintEnd_toEndOf="@+id/expandBox2"
+        app:layout_constraintStart_toStartOf="@+id/expandBox2"
+        app:layout_constraintTop_toTopOf="@+id/expandBox2"
         />
 
 
@@ -187,25 +174,6 @@
         app:layout_constraintStart_toStartOf="@+id/expandedBox1"
         app:layout_constraintTop_toTopOf="@+id/expandedBox1"
         android:visibility="gone"/>
-
-    <ToggleButton
-        android:id="@+id/day1"
-        android:layout_width="16dp"
-        android:layout_height="30dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        android:background="#0000"
-        android:onClick="weekDayCheck"
-        android:textColor="button_text_color"
-        android:textOff="א"
-        android:textOn="א"
-        android:textSize="25sp"
-        android:textStyle="bold"
-        android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="@+id/timeTableRect"
-        app:layout_constraintEnd_toEndOf="@+id/timeTableRect"
-        app:layout_constraintTop_toTopOf="@+id/timeTableRect"
-        app:layout_constraintVertical_bias="0.441" />
 
 
     <ImageView
@@ -401,24 +369,7 @@
         app:layout_constraintTop_toBottomOf="@+id/timeTableRect"
         app:layout_constraintVertical_bias="0.403" />
 
-    <View
-        android:id="@+id/expandBox2"
-        android:layout_width="327dp"
-        android:layout_height="122dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="18dp"
-        android:layout_marginLeft="18dp"
-        android:layout_marginTop="19.39dp"
-        android:layout_marginEnd="15dp"
-        android:layout_marginRight="15dp"
-        android:background="@drawable/expandbox"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.509"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/expandBox1" />
-
-    <View
+    <!--    <View
         android:id="@+id/expandedBox2"
         android:layout_width="327dp"
         android:layout_height="217dp"
@@ -434,9 +385,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.47"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/expandBox1" />
+        app:layout_constraintTop_toBottomOf="@id/expandBox1" />-->
 
-    <TextView
+<!--    <TextView
         android:id="@+id/location_headline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -455,7 +406,24 @@
         app:layout_constraintEnd_toEndOf="@+id/expandBox2"
         app:layout_constraintStart_toStartOf="@+id/expandBox2"
         app:layout_constraintTop_toTopOf="@+id/expandBox2"
-        android:elevation="1dp"/>
+        android:elevation="1dp"/>-->
+
+    <View
+        android:id="@+id/expandBox2"
+        android:layout_width="327dp"
+        android:layout_height="70dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="18dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/expandbox"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/expandedBox1" />
 
     <TextView
         android:id="@+id/location_text"
@@ -480,7 +448,7 @@
         android:elevation="1dp"
         />
 
-    <ImageView
+ <!--   <ImageView
         android:id="@+id/location_icon"
         android:layout_width="20dp"
         android:layout_height="20dp"
@@ -495,22 +463,9 @@
         app:layout_constraintEnd_toEndOf="@+id/expandBox2"
         app:layout_constraintStart_toStartOf="@+id/expandBox2"
         app:layout_constraintTop_toTopOf="@+id/expandBox2"
-        android:elevation="1dp"/>
+        android:elevation="1dp"/>-->
 
-    <TextView
-        android:id="@+id/loc_acc_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="76dp"
-        android:text="@string/loc_acc_text"
-        android:textColor="#001925"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="@+id/expandBox2"
-        app:layout_constraintHorizontal_bias="0.653"
-        app:layout_constraintStart_toEndOf="@+id/switch_button"
-        app:layout_constraintTop_toTopOf="@+id/expandBox2" />
-
-    <Switch
+    <!--<Switch
         android:id="@+id/switch_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -525,10 +480,10 @@
         app:layout_constraintStart_toEndOf="@+id/expandBox2"
         app:layout_constraintTop_toTopOf="@+id/expandBox2"
         android:checked="false"
-        android:elevation="1dp"/>
+        android:elevation="1dp"/>-->
 
 
-    <LinearLayout
+<!--    <LinearLayout
         android:id="@+id/linearlayout01"
         android:layout_width="320dp"
         android:layout_height="48dp"
@@ -550,12 +505,12 @@
             android:layout_height="48dp"
             android:gravity="right"
             android:visibility="visible"/>
-    </LinearLayout>
+    </LinearLayout>-->
     <Button
         android:id="@+id/letsVolunteer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="600dp"
+        android:layout_marginTop="665dp"
         android:background="@drawable/ic_letsvolunteer"
         android:clickable="true"
         android:onClick="letsVolunteer"
@@ -564,7 +519,7 @@
         app:layout_constraintTop_toTopOf="parent"
         android:focusable="true" />
 
-    <Button
+    <!--<Button
         android:id="@+id/skip"
         android:layout_width="22dp"
         android:layout_height="12dp"
@@ -573,7 +528,7 @@
         android:textColor="#350016"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/letsVolunteer" />
+        app:layout_constraintTop_toBottomOf="@+id/letsVolunteer" />-->
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
