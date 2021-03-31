@@ -31,20 +31,6 @@
         app:layout_constraintTop_toTopOf="@+id/ellipse_59" />
 
 
-    <!--    <ImageView
-            android:id="@+id/michal"
-            android:layout_width="21dp"
-            android:layout_height="16dp"
-            android:layout_marginStart="317dp"
-            android:layout_marginLeft="317dp"
-            android:layout_marginTop="31dp"
-            android:layout_marginEnd="18dp"
-            android:layout_marginRight="18dp"
-            android:src=""
-            app:layout_constraintEnd_toEndOf="@+id/ellipse_59"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/ellipse_59" />-->
-
     <TextView
         android:id="@+id/headline"
         android:layout_width="wrap_content"
@@ -56,7 +42,7 @@
         android:layout_marginRight="135dp"
         android:layout_marginBottom="42dp"
         android:fontFamily="@font/rubik_bold"
-        android:text="סיפורו של מוישה"
+        android:text="סיפורה של מלכה"
         android:textAppearance="@style/createHeadlineAppearance"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="@+id/ellipse_59"
@@ -64,100 +50,39 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/ellipse_59" />
 
-    <!--    <View
-            android:id="@+id/expandBox1"
-            android:layout_width="327dp"
-            android:layout_height="122dp"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="18dp"
-            android:layout_marginLeft="18dp"
-            android:layout_marginTop="42dp"
-            android:layout_marginEnd="15dp"
-            android:layout_marginRight="15dp"
-            android:background="@drawable/expandbox"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/ellipse_59" />-->
 
-    <View
-        android:id="@+id/expandedBox1"
-        android:layout_width="250dp"
-        android:layout_height="444dp"
+    <VideoView
+        android:id="@+id/videoView"
+        android:layout_width="220dp"
+        android:layout_height="391dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="18dp"
         android:layout_marginLeft="18dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="12dp"
         android:layout_marginEnd="15dp"
         android:layout_marginRight="15dp"
-        android:background="@drawable/ic_expandedbox"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.484"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/ellipse_59" />
 
-    <!--    <Button
-        android:id="@+id/expandButton"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="14dp"
-        android:layout_marginLeft="14dp"
-        android:layout_marginTop="70dp"
-        android:layout_marginEnd="272dp"
-        android:layout_marginRight="272dp"
-        android:layout_marginBottom="12dp"
-        android:background="@drawable/add_circle_24"
-        android:onClick="expandTimeBox"
-        app:layout_constraintBottom_toBottomOf="@+id/expandBox1"
-        app:layout_constraintEnd_toEndOf="@+id/expandBox1"
-        app:layout_constraintStart_toStartOf="@+id/expandBox1"
-        app:layout_constraintTop_toTopOf="@+id/expandBox1"
-        android:elevation="1dp"/>-->
-
-    <!--        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ellipse_59" />-->
-
-
     <TextView
-        android:id="@+id/time_headline"
+        android:id="@+id/location_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="100dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="41dp"
-        android:layout_marginRight="41dp"
-        android:layout_marginBottom="85dp"
-        android:elevation="1dp"
-        android:fontFamily="@font/rubik"
-        android:gravity="right|center_vertical"
-        android:text="@string/time_headline"
-        android:textAppearance="@style/headline"
-        app:layout_constraintBottom_toBottomOf="@+id/ellipse_59"
-        app:layout_constraintEnd_toEndOf="@+id/ellipse_59"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/ellipse_59"
-        app:layout_constraintTop_toTopOf="@+id/ellipse_59"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <TextView
-        android:id="@+id/time_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="19.75dp"
         android:layout_marginLeft="19.75dp"
-        android:layout_marginTop="41dp"
+        android:layout_marginTop="55dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         android:layout_marginBottom="61dp"
         android:elevation="1dp"
-        android:gravity="right|center_vertical"
+        android:gravity="center"
         android:lineSpacingExtra="1sp"
-        android:text="@string/time_text"
+        android:text="צפו בסרטון \n ושתפו אותו עם חבריכם בעזרת הכפתור מטה"
+        android:textSize="16dp"
         android:textAppearance="@style/text"
         app:layout_constraintBottom_toBottomOf="@+id/expandBox2"
         app:layout_constraintEnd_toEndOf="@+id/expandBox2"
@@ -171,371 +96,45 @@
         android:layout_height="wrap_content"
         android:src="@drawable/ic_whiterectangle"
         android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="@+id/expandedBox1"
-        app:layout_constraintEnd_toEndOf="@+id/expandedBox1"
-        app:layout_constraintStart_toStartOf="@+id/expandedBox1"
-        app:layout_constraintTop_toTopOf="@+id/expandedBox1" />
+        app:layout_constraintBottom_toBottomOf="@+id/videoView"
+        app:layout_constraintEnd_toEndOf="@+id/videoView"
+        app:layout_constraintStart_toStartOf="@+id/videoView"
+        app:layout_constraintTop_toTopOf="@+id/videoView" />
 
 
-    <ImageView
-        android:id="@+id/line_24"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="44dp"
-        android:layout_marginRight="44dp"
-        android:background="@drawable/line_24"
-        android:visibility="gone"
-        app:layout_constraintEnd_toEndOf="@+id/timeTableRect"
-        app:layout_constraintTop_toTopOf="@+id/timeTableRect" />
-
-    <ToggleButton
-        android:id="@+id/day2"
-        android:layout_width="16dp"
-        android:layout_height="30dp"
-        android:layout_marginEnd="60dp"
-        android:layout_marginRight="60dp"
-        android:background="#0000"
-        android:onClick="weekDayCheck"
-        android:textColor="@color/button_text_color"
-        android:textOff="ב"
-        android:textOn="ב"
-        android:textSize="25sp"
-        android:textStyle="bold"
-        android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="@+id/timeTableRect"
-        app:layout_constraintEnd_toEndOf="@+id/timeTableRect"
-        app:layout_constraintTop_toTopOf="@+id/timeTableRect"
-        app:layout_constraintVertical_bias="0.441" />
-
-
-    <ImageView
-        android:id="@+id/line_25"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="96dp"
-        android:layout_marginRight="95dp"
-        android:background="@drawable/line_24"
-        android:visibility="gone"
-        app:layout_constraintEnd_toEndOf="@+id/timeTableRect"
-        app:layout_constraintTop_toTopOf="@+id/timeTableRect" />
-
-    <ToggleButton
-        android:id="@+id/day3"
-        android:layout_width="16dp"
-        android:layout_height="30dp"
-        android:layout_marginEnd="112dp"
-        android:layout_marginRight="112dp"
-        android:background="#0000"
-        android:onClick="weekDayCheck"
-        android:textColor="@color/button_text_color"
-        android:textOff="ג"
-        android:textOn="ג"
-        android:textSize="25sp"
-        android:textStyle="bold"
-        android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="@+id/timeTableRect"
-        app:layout_constraintEnd_toEndOf="@+id/timeTableRect"
-        app:layout_constraintTop_toTopOf="@+id/timeTableRect"
-        app:layout_constraintVertical_bias="0.411" />
-
-
-    <ImageView
-        android:id="@+id/line_26"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="140dp"
-        android:layout_marginRight="140dp"
-        android:background="@drawable/line_24"
-        android:visibility="gone"
-        app:layout_constraintEnd_toEndOf="@+id/timeTableRect"
-        app:layout_constraintTop_toTopOf="@+id/timeTableRect" />
-
-    <ToggleButton
-        android:id="@+id/day4"
-        android:layout_width="16dp"
-        android:layout_height="30dp"
-        android:layout_marginEnd="152dp"
-        android:layout_marginRight="152dp"
-        android:background="#0000"
-        android:onClick="weekDayCheck"
-        android:textColor="@color/button_text_color"
-        android:textOff="ד"
-        android:textOn="ד"
-        android:textSize="25sp"
-        android:textStyle="bold"
-        android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="@+id/timeTableRect"
-        app:layout_constraintEnd_toEndOf="@+id/timeTableRect"
-        app:layout_constraintTop_toTopOf="@+id/timeTableRect"
-        app:layout_constraintVertical_bias="0.411" />
-
-
-    <ImageView
-        android:id="@+id/line_27"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="184dp"
-        android:layout_marginRight="184dp"
-        android:background="@drawable/line_24"
-        android:visibility="gone"
-        app:layout_constraintEnd_toEndOf="@+id/timeTableRect"
-        app:layout_constraintTop_toTopOf="@+id/timeTableRect" />
-
-    <ToggleButton
-        android:id="@+id/day5"
-        android:layout_width="16dp"
-        android:layout_height="30dp"
-        android:layout_marginEnd="204dp"
-        android:layout_marginRight="204dp"
-        android:background="#0000"
-        android:onClick="weekDayCheck"
-        android:textColor="@color/button_text_color"
-        android:textOff="ה"
-        android:textOn="ה"
-        android:textSize="25sp"
-        android:textStyle="bold"
-        android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="@+id/timeTableRect"
-        app:layout_constraintEnd_toEndOf="@+id/timeTableRect"
-        app:layout_constraintTop_toTopOf="@+id/timeTableRect"
-        app:layout_constraintVertical_bias="0.411" />
-
-
-    <ImageView
-        android:id="@+id/line_28"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="236dp"
-        android:layout_marginRight="236dp"
-        android:background="@drawable/line_24"
-        android:visibility="gone"
-        app:layout_constraintEnd_toEndOf="@+id/timeTableRect"
-        app:layout_constraintTop_toTopOf="@+id/timeTableRect" />
-
-    <ToggleButton
-        android:id="@+id/day6"
-        android:layout_width="16dp"
-        android:layout_height="30dp"
-        android:layout_marginEnd="256dp"
-        android:layout_marginRight="256dp"
-        android:background="#0000"
-        android:onClick="weekDayCheck"
-        android:textColor="@color/button_text_color"
-        android:textOff="ו"
-        android:textOn="ו"
-        android:textSize="25sp"
-        android:textStyle="bold"
-        android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="@+id/timeTableRect"
-        app:layout_constraintEnd_toEndOf="@+id/timeTableRect"
-        app:layout_constraintTop_toTopOf="@+id/timeTableRect"
-        app:layout_constraintVertical_bias="0.411" />
-
-    <Spinner
-        android:id="@+id/Timespinner"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="154dp"
-        android:layout_marginLeft="154dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginEnd="21dp"
-        android:layout_marginRight="21dp"
-        android:layout_marginBottom="26dp"
-        android:background="@drawable/ic_dropdown"
-        android:gravity="right"
-        android:spinnerMode="dropdown"
-        android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="@+id/expandedBox1"
-        app:layout_constraintEnd_toEndOf="@+id/expandedBox1"
-        app:layout_constraintStart_toStartOf="@+id/expandedBox1"
-        app:layout_constraintTop_toBottomOf="@+id/timeTableRect" />
-
-    <TextView
-        android:id="@+id/time_windows_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="60dp"
-        android:layout_marginRight="50dp"
-        android:background="#00000000"
-        android:textColor="#001925"
-        android:textSize="14sp"
-        android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="@+id/expandedBox1"
-        app:layout_constraintEnd_toStartOf="@+id/Timespinner"
-        app:layout_constraintTop_toBottomOf="@+id/timeTableRect"
-        app:layout_constraintVertical_bias="0.403" />
-
-    <!--    <View
-        android:id="@+id/expandedBox2"
-        android:layout_width="327dp"
-        android:layout_height="217dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="18dp"
-        android:layout_marginLeft="18dp"
-        android:layout_marginTop="19.39dp"
-        android:layout_marginEnd="15dp"
-        android:layout_marginRight="15dp"
-        android:background="@drawable/ic_expandedbox"
-        android:elevation="0dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.47"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/expandBox1" />-->
-
-    <!--    <TextView
-            android:id="@+id/location_headline"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:text="@string/location_headline"
-            android:layout_marginStart="218dp"
-            android:layout_marginLeft="218dp"
-            android:layout_marginTop="17dp"
-            android:layout_marginEnd="41dp"
-            android:layout_marginRight="41dp"
-            android:layout_marginBottom="85dp"
-            android:textAppearance="@style/headline"
-            android:gravity="right|center_vertical"
-            app:layout_constraintBottom_toBottomOf="@+id/expandBox2"
-            app:layout_constraintEnd_toEndOf="@+id/expandBox2"
-            app:layout_constraintStart_toStartOf="@+id/expandBox2"
-            app:layout_constraintTop_toTopOf="@+id/expandBox2"
-            android:elevation="1dp"/>-->
 
     <View
         android:id="@+id/expandBox2"
         android:layout_width="327dp"
         android:layout_height="70dp"
+        android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="18dp"
         android:layout_marginLeft="18dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="15dp"
+        android:backgroundTint="@color/bgColor"
         android:layout_marginRight="15dp"
         android:background="@drawable/expandbox"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.509"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/expandedBox1" />
+        app:layout_constraintTop_toBottomOf="@id/videoView" />
 
-    <TextView
-        android:id="@+id/location_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="19.75dp"
-        android:layout_marginLeft="19.75dp"
-        android:layout_marginTop="41dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginBottom="61dp"
-        android:elevation="1dp"
-        android:fontFamily="@font/rubik"
-        android:gravity="right|center_vertical"
-        android:lineSpacingExtra="1sp"
-        android:text="@string/location_text"
-        android:textAppearance="@style/text"
-        app:layout_constraintBottom_toBottomOf="@+id/expandBox2"
-        app:layout_constraintEnd_toEndOf="@+id/expandBox2"
-        app:layout_constraintStart_toStartOf="@+id/expandBox2"
-        app:layout_constraintTop_toTopOf="@+id/expandBox2" />
-
-
-    <!--   <ImageView
-           android:id="@+id/location_icon"
-           android:layout_width="20dp"
-           android:layout_height="20dp"
-           android:layout_marginStart="291dp"
-           android:layout_marginLeft="291dp"
-           android:layout_marginTop="17dp"
-           android:layout_marginEnd="16dp"
-           android:layout_marginRight="16dp"
-           android:layout_marginBottom="85dp"
-           android:src="@drawable/map_pin_line"
-           app:layout_constraintBottom_toBottomOf="@+id/expandBox2"
-           app:layout_constraintEnd_toEndOf="@+id/expandBox2"
-           app:layout_constraintStart_toStartOf="@+id/expandBox2"
-           app:layout_constraintTop_toTopOf="@+id/expandBox2"
-           android:elevation="1dp"/>-->
-
-    <!--<Switch
-        android:id="@+id/switch_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="14dp"
-        android:layout_marginLeft="14dp"
-        android:layout_marginTop="70dp"
-        android:layout_marginEnd="240.75dp"
-        android:layout_marginRight="240.75dp"
-        android:layout_marginBottom="12dp"
-        app:layout_constraintBottom_toBottomOf="@+id/expandBox2"
-        app:layout_constraintStart_toStartOf="@+id/expandBox2"
-        app:layout_constraintStart_toEndOf="@+id/expandBox2"
-        app:layout_constraintTop_toTopOf="@+id/expandBox2"
-        android:checked="false"
-        android:elevation="1dp"/>-->
-
-
-    <!--    <LinearLayout
-            android:id="@+id/linearlayout01"
-            android:layout_width="320dp"
-            android:layout_height="48dp"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="16dp"
-            android:background="@drawable/textfield_d"
-            android:layout_weight="1"
-            android:orientation="vertical"
-            android:textDirection="anyRtl"
-            android:gravity="right"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.504"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/expandBox2">
-            <fragment
-                android:id="@+id/autocomplete_address"
-                android:name="com.google.android.libraries.places.widget.AutocompleteSupportFragment"
-                android:layout_width="320dp"
-                android:layout_height="48dp"
-                android:gravity="right"
-                android:visibility="visible"/>
-        </LinearLayout>-->
-
-
-    <Button
-        android:id="@+id/openInstagramBtn"
-        android:layout_width="102dp"
-        android:layout_height="38dp"
-        android:layout_marginTop="664dp"
-        android:background="@drawable/ic_letsvolunteer"
-        android:clickable="true"
-        android:focusable="true"
-        android:onClick="openInstagram"
-        android:text="insta"
+    <ImageView
+        android:id="@+id/story_share"
+        style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+        android:layout_width="124dp"
+        android:layout_height="104dp"
+        android:contentDescription="TODO"
+        android:src="@drawable/share_story"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.265"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/expandBox2"
+        app:layout_constraintVertical_bias="0.974" />
 
-    <Button
-        android:id="@+id/downloadBtn"
-        android:layout_width="102dp"
-        android:layout_height="38dp"
-        android:layout_marginTop="664dp"
-        android:background="@drawable/ic_letsvolunteer"
-        android:clickable="true"
-        android:focusable="true"
-        android:onClick="download"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.744"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
