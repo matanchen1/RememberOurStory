@@ -105,7 +105,7 @@ public class StoryActivity extends AppCompatActivity {
 //            System.out.println("Oops! You don't have Instagram App.");
 //            StepIndex = 0;
 //        }
-        ShareProcess.share(R.raw.video1,ShareProcess.VIDEO,this);
+//        ShareProcess.share(R.raw.video1,ShareProcess.VIDEO,this);
 
     }
 

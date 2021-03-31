@@ -10,15 +10,15 @@
 
     <ImageView
         android:id="@+id/heroism_intro_image"
-        android:layout_width="405dp"
-        android:layout_height="194dp"
+        android:layout_width="411dp"
+        android:layout_height="231dp"
         android:src="@drawable/logo_remember"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.056" />
+        app:layout_constraintVertical_bias="0.032" />
 
     <TextView
         android:layout_width="364dp"
@@ -28,11 +28,11 @@
         android:layout_marginBottom="10dp"
         android:fontFamily="@font/rubik"
         android:gravity="center"
-        android:text="הצטרפו אלינו למסע להנצחת גיבורי השואה\nהתחילו את המסע בבחירת הגיבור בעמוד הבא, לאחר מכן תוכלו להפוך את הסיפור לשלכם.\nעקבו אחרי ההוראות והעלו את הסטורי לאינסטגרם לפי השלבים.\n\n אנא וודאו כי תוכנת האינסטגרם מותקים במכשירכם"
+        android:text="הצטרפו אלינו למסע להנצחת גיבורי השואה.\nהתחילו את המסע בבחירת הגיבור בעמוד הבא, לאחר מכן תוכלו להפוך את הסיפור לשלכם.\nעקבו אחרי ההוראות והעלו את הסטורי לאינסטגרם לפי השלבים,\n\בסיום כל שלב חזרו למסך האפליקציה כדי להמשיך לשלב הבא.\n אנא וודאו כי תוכנת האינסטגרם מותקנת במכשירכם."
         android:textColor="#000000"
         android:textColorHighlight="#FFEB3B"
         android:textColorLink="#FFC107"
-        android:textSize="23sp"
+        android:textSize="22sp"
         app:layout_constraintBottom_toTopOf="@+id/startBtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
