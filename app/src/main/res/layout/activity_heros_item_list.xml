@@ -12,30 +12,42 @@
         android:layout_width="match_parent"
         android:layout_height="85dp"
         android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
         android:outlineAmbientShadowColor="#FFFFFF"
         android:visibility="invisible">
 
 
     </com.google.android.material.appbar.AppBarLayout>
 
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
+        <include layout="@layout/temp_item_list_1"
+            />
+
+
+    </FrameLayout>
 
     <View
         android:id="@+id/Sfilters"
         android:layout_width="match_parent"
         android:layout_height="85dp"
         android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
         android:background="@drawable/ellipse_59"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_alignParentStart="true" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
 
 
         android:id="@+id/barText"
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="בחר גיבור"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         app:layout_anchor="@+id/Sfilters"
@@ -43,7 +55,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/Sfilters"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-         />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/returBtn"
@@ -52,14 +64,5 @@
         android:text="חזור"
         style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
         />
-    <RelativeLayout
-        android:id="@+id/frameLayout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior"
-        >
-
-
-    </RelativeLayout>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
