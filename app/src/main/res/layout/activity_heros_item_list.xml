@@ -41,19 +41,14 @@
         android:text="בחר גיבור"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         app:layout_anchor="@+id/Sfilters"
+        android:fontFamily="@font/rubik_bold"
+        android:textColor="@color/black"
         app:layout_anchorGravity="center"
         app:layout_constraintBottom_toBottomOf="@+id/Sfilters"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/returBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="חזור"
-        style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
-        />
     <FrameLayout
         android:id="@+id/frameLayout"
         android:layout_width="match_parent"
@@ -116,5 +111,15 @@
 
 
     </FrameLayout>
+
+    <Button
+        android:id="@+id/returBtn"
+        android:layout_width="48dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="340dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/top_back_arrow_blue" />
+
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
