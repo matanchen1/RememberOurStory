@@ -2,8 +2,8 @@
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
     android:fitsSystemWindows="true"
     tools:context=".ItemListActivity">
 
@@ -17,13 +17,43 @@
         android:visibility="invisible">
 
 
-        <Button
-            android:id="@+id/returBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="חזור" />
     </com.google.android.material.appbar.AppBarLayout>
 
+
+
+    <View
+        android:id="@+id/Sfilters"
+        android:layout_width="match_parent"
+        android:layout_height="85dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/ellipse_59"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+
+
+        android:id="@+id/barText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="בחר גיבור"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        app:layout_anchor="@+id/Sfilters"
+        app:layout_anchorGravity="center"
+        app:layout_constraintBottom_toBottomOf="@+id/Sfilters"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/returBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="חזור"
+        style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+        />
     <FrameLayout
         android:id="@+id/frameLayout"
         android:layout_width="match_parent"
@@ -86,32 +116,5 @@
 
 
     </FrameLayout>
-
-
-    <View
-        android:id="@+id/Sfilters"
-        android:layout_width="match_parent"
-        android:layout_height="85dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:background="@drawable/ellipse_59"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-
-
-        android:id="@+id/barText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="בחר גיבור"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        app:layout_anchor="@+id/Sfilters"
-        app:layout_anchorGravity="center"
-        app:layout_constraintBottom_toBottomOf="@+id/Sfilters"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

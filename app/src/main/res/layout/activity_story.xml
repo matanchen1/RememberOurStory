@@ -512,30 +512,33 @@
                 android:gravity="right"
                 android:visibility="visible"/>
         </LinearLayout>-->
+
+
     <Button
-        android:id="@+id/letsVolunteer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="665dp"
+        android:id="@+id/openInstagram"
+        android:layout_width="102dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="664dp"
         android:background="@drawable/ic_letsvolunteer"
-        android:text="שתף לסטורי של האינסטגרם"
         android:clickable="true"
-        android:onClick="letsVolunteer"
+        android:focusable="true"
+        android:onClick="openInstagram"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.265"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:focusable="true" />
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <!--<Button
-        android:id="@+id/skip"
-        android:layout_width="22dp"
-        android:layout_height="12dp"
-        android:layout_marginTop="16dp"
-        android:background="@drawable/ic_skip"
-        android:textColor="#350016"
+    <Button
+        android:id="@+id/download"
+        android:layout_width="102dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="664dp"
+        android:background="@drawable/ic_letsvolunteer"
+        android:clickable="true"
+        android:focusable="true"
+        android:onClick="download"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.744"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/letsVolunteer" />-->
-
-
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
