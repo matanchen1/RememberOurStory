@@ -6,16 +6,17 @@
     android:background="@color/cardview_dark_background"
     android:padding="5dp"
     android:layout_gravity="center">
+
     <TextView
         android:id="@+id/txtclose"
         android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:textColor="@color/white"
-        android:text="X"
-        android:textStyle="bold"
+        android:layout_height="20dp"
         android:layout_gravity="end"
+        android:background="@drawable/ic_launcher_background"
         android:gravity="center"
-        android:background="@drawable/ic_launcher_background"/>
+        android:text="X"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -51,7 +52,7 @@
 
 
         <LinearLayout
-            android:background="@color/green"
+            android:background="@color/com_facebook_blue"
             android:gravity="center"
             android:orientation="vertical"
             android:layout_weight="1"
@@ -61,13 +62,13 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="19"
+                android:text="כל הכבוד"
                 android:textSize="18sp"
                 android:textColor="@color/white"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Cities"
+                android:text="קיבלת 15 מטבעות"
                 android:textSize="18sp"
                 android:textColor="@color/white"/>
         </LinearLayout>
@@ -82,25 +83,25 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="50"
+                android:text="עשעשע"
                 android:textSize="18sp"
                 android:textColor="@color/white"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Posts"
+                android:text="עעשעשע"
                 android:textSize="18sp"
                 android:textColor="@color/white"/>
         </LinearLayout>
     </LinearLayout>
 
     <Button
-        android:id="@+id/btnfollow"
+        android:id="@+id/closeBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Follow Me"
-        android:layout_marginTop="25dp"
         android:layout_gravity="center_horizontal"
-        android:textColor="@color/white"/>
+        android:layout_marginTop="25dp"
+        android:text="המשך"
+        android:textColor="@color/white" />
 
 </LinearLayout>

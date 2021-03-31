@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/constraint_layout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    >
+    android:layout_height="match_parent">
 
     <View
         android:id="@+id/ellipse_59"
@@ -27,6 +26,8 @@
         android:layout_marginTop="31dp"
         android:layout_marginEnd="18dp"
         android:layout_marginRight="18dp"
+        android:clickable="true"
+        android:focusable="true"
         android:src="@drawable/top_back_arrow_24"
         app:layout_constraintEnd_toEndOf="@+id/ellipse_59"
         app:layout_constraintStart_toStartOf="parent"
@@ -132,6 +133,7 @@
         android:layout_marginRight="41dp"
         android:layout_marginBottom="85dp"
         android:elevation="1dp"
+        android:fontFamily="@font/rubik"
         android:gravity="right|center_vertical"
         android:text="@string/time_headline"
         android:textAppearance="@style/headline"
@@ -140,12 +142,10 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/ellipse_59"
         app:layout_constraintTop_toTopOf="@+id/ellipse_59"
-        app:layout_constraintVertical_bias="0.0"
-        android:fontFamily="@font/rubik" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/time_text"
-        android:elevation="1dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
@@ -156,15 +156,15 @@
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         android:layout_marginBottom="61dp"
+        android:elevation="1dp"
+        android:gravity="right|center_vertical"
+        android:lineSpacingExtra="1sp"
         android:text="@string/time_text"
         android:textAppearance="@style/text"
-        android:lineSpacingExtra="1sp"
-        android:gravity="right|center_vertical"
         app:layout_constraintBottom_toBottomOf="@+id/expandBox2"
         app:layout_constraintEnd_toEndOf="@+id/expandBox2"
         app:layout_constraintStart_toStartOf="@+id/expandBox2"
-        app:layout_constraintTop_toTopOf="@+id/expandBox2"
-        />
+        app:layout_constraintTop_toTopOf="@+id/expandBox2" />
 
 
     <ImageView
@@ -172,11 +172,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/ic_whiterectangle"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="@+id/expandedBox1"
         app:layout_constraintEnd_toEndOf="@+id/expandedBox1"
         app:layout_constraintStart_toStartOf="@+id/expandedBox1"
-        app:layout_constraintTop_toTopOf="@+id/expandedBox1"
-        android:visibility="gone"/>
+        app:layout_constraintTop_toTopOf="@+id/expandedBox1" />
 
 
     <ImageView
@@ -187,9 +187,9 @@
         android:layout_marginEnd="44dp"
         android:layout_marginRight="44dp"
         android:background="@drawable/line_24"
+        android:visibility="gone"
         app:layout_constraintEnd_toEndOf="@+id/timeTableRect"
-        app:layout_constraintTop_toTopOf="@+id/timeTableRect"
-        android:visibility="gone"/>
+        app:layout_constraintTop_toTopOf="@+id/timeTableRect" />
 
     <ToggleButton
         android:id="@+id/day2"
@@ -197,18 +197,18 @@
         android:layout_height="30dp"
         android:layout_marginEnd="60dp"
         android:layout_marginRight="60dp"
-        android:textColor="@color/button_text_color"
         android:background="#0000"
+        android:onClick="weekDayCheck"
+        android:textColor="@color/button_text_color"
         android:textOff="ב"
         android:textOn="ב"
         android:textSize="25sp"
         android:textStyle="bold"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="@+id/timeTableRect"
         app:layout_constraintEnd_toEndOf="@+id/timeTableRect"
         app:layout_constraintTop_toTopOf="@+id/timeTableRect"
-        app:layout_constraintVertical_bias="0.441"
-        android:visibility="gone"
-        android:onClick="weekDayCheck" />
+        app:layout_constraintVertical_bias="0.441" />
 
 
     <ImageView
@@ -219,9 +219,9 @@
         android:layout_marginEnd="96dp"
         android:layout_marginRight="95dp"
         android:background="@drawable/line_24"
+        android:visibility="gone"
         app:layout_constraintEnd_toEndOf="@+id/timeTableRect"
-        app:layout_constraintTop_toTopOf="@+id/timeTableRect"
-        android:visibility="gone"/>
+        app:layout_constraintTop_toTopOf="@+id/timeTableRect" />
 
     <ToggleButton
         android:id="@+id/day3"
@@ -229,18 +229,18 @@
         android:layout_height="30dp"
         android:layout_marginEnd="112dp"
         android:layout_marginRight="112dp"
-        android:textColor="@color/button_text_color"
         android:background="#0000"
+        android:onClick="weekDayCheck"
+        android:textColor="@color/button_text_color"
         android:textOff="ג"
         android:textOn="ג"
         android:textSize="25sp"
         android:textStyle="bold"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="@+id/timeTableRect"
         app:layout_constraintEnd_toEndOf="@+id/timeTableRect"
         app:layout_constraintTop_toTopOf="@+id/timeTableRect"
-        app:layout_constraintVertical_bias="0.411"
-        android:visibility="gone"
-        android:onClick="weekDayCheck" />
+        app:layout_constraintVertical_bias="0.411" />
 
 
     <ImageView
@@ -251,9 +251,9 @@
         android:layout_marginEnd="140dp"
         android:layout_marginRight="140dp"
         android:background="@drawable/line_24"
+        android:visibility="gone"
         app:layout_constraintEnd_toEndOf="@+id/timeTableRect"
-        app:layout_constraintTop_toTopOf="@+id/timeTableRect"
-        android:visibility="gone"/>
+        app:layout_constraintTop_toTopOf="@+id/timeTableRect" />
 
     <ToggleButton
         android:id="@+id/day4"
@@ -261,18 +261,18 @@
         android:layout_height="30dp"
         android:layout_marginEnd="152dp"
         android:layout_marginRight="152dp"
-        android:textColor="@color/button_text_color"
         android:background="#0000"
+        android:onClick="weekDayCheck"
+        android:textColor="@color/button_text_color"
         android:textOff="ד"
         android:textOn="ד"
         android:textSize="25sp"
         android:textStyle="bold"
-        android:onClick="weekDayCheck"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="@+id/timeTableRect"
         app:layout_constraintEnd_toEndOf="@+id/timeTableRect"
         app:layout_constraintTop_toTopOf="@+id/timeTableRect"
-        app:layout_constraintVertical_bias="0.411"
-        android:visibility="gone" />
+        app:layout_constraintVertical_bias="0.411" />
 
 
     <ImageView
@@ -283,9 +283,9 @@
         android:layout_marginEnd="184dp"
         android:layout_marginRight="184dp"
         android:background="@drawable/line_24"
+        android:visibility="gone"
         app:layout_constraintEnd_toEndOf="@+id/timeTableRect"
-        app:layout_constraintTop_toTopOf="@+id/timeTableRect"
-        android:visibility="gone"/>
+        app:layout_constraintTop_toTopOf="@+id/timeTableRect" />
 
     <ToggleButton
         android:id="@+id/day5"
@@ -293,18 +293,18 @@
         android:layout_height="30dp"
         android:layout_marginEnd="204dp"
         android:layout_marginRight="204dp"
-        android:textColor="@color/button_text_color"
         android:background="#0000"
+        android:onClick="weekDayCheck"
+        android:textColor="@color/button_text_color"
         android:textOff="ה"
         android:textOn="ה"
         android:textSize="25sp"
         android:textStyle="bold"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="@+id/timeTableRect"
         app:layout_constraintEnd_toEndOf="@+id/timeTableRect"
         app:layout_constraintTop_toTopOf="@+id/timeTableRect"
-        app:layout_constraintVertical_bias="0.411"
-        android:visibility="gone"
-        android:onClick="weekDayCheck" />
+        app:layout_constraintVertical_bias="0.411" />
 
 
     <ImageView
@@ -315,9 +315,9 @@
         android:layout_marginEnd="236dp"
         android:layout_marginRight="236dp"
         android:background="@drawable/line_24"
+        android:visibility="gone"
         app:layout_constraintEnd_toEndOf="@+id/timeTableRect"
-        app:layout_constraintTop_toTopOf="@+id/timeTableRect"
-        android:visibility="gone"/>
+        app:layout_constraintTop_toTopOf="@+id/timeTableRect" />
 
     <ToggleButton
         android:id="@+id/day6"
@@ -325,18 +325,18 @@
         android:layout_height="30dp"
         android:layout_marginEnd="256dp"
         android:layout_marginRight="256dp"
-        android:textColor="@color/button_text_color"
         android:background="#0000"
+        android:onClick="weekDayCheck"
+        android:textColor="@color/button_text_color"
         android:textOff="ו"
         android:textOn="ו"
         android:textSize="25sp"
         android:textStyle="bold"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="@+id/timeTableRect"
         app:layout_constraintEnd_toEndOf="@+id/timeTableRect"
         app:layout_constraintTop_toTopOf="@+id/timeTableRect"
-        app:layout_constraintVertical_bias="0.411"
-        android:visibility="gone"
-        android:onClick="weekDayCheck" />
+        app:layout_constraintVertical_bias="0.411" />
 
     <Spinner
         android:id="@+id/Timespinner"
@@ -348,9 +348,9 @@
         android:layout_marginEnd="21dp"
         android:layout_marginRight="21dp"
         android:layout_marginBottom="26dp"
-        android:spinnerMode="dropdown"
         android:background="@drawable/ic_dropdown"
         android:gravity="right"
+        android:spinnerMode="dropdown"
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="@+id/expandedBox1"
         app:layout_constraintEnd_toEndOf="@+id/expandedBox1"
@@ -440,18 +440,16 @@
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         android:layout_marginBottom="61dp"
+        android:elevation="1dp"
+        android:fontFamily="@font/rubik"
+        android:gravity="right|center_vertical"
+        android:lineSpacingExtra="1sp"
         android:text="@string/location_text"
         android:textAppearance="@style/text"
-        android:lineSpacingExtra="1sp"
-        android:gravity="right|center_vertical"
         app:layout_constraintBottom_toBottomOf="@+id/expandBox2"
         app:layout_constraintEnd_toEndOf="@+id/expandBox2"
         app:layout_constraintStart_toStartOf="@+id/expandBox2"
-        app:layout_constraintTop_toTopOf="@+id/expandBox2"
-        android:elevation="1dp"
-        android:fontFamily="@font/rubik"
-        />
-
+        app:layout_constraintTop_toTopOf="@+id/expandBox2" />
 
 
     <!--   <ImageView
@@ -515,7 +513,7 @@
 
 
     <Button
-        android:id="@+id/openInstagram"
+        android:id="@+id/openInstagramBtn"
         android:layout_width="102dp"
         android:layout_height="38dp"
         android:layout_marginTop="664dp"
@@ -523,13 +521,14 @@
         android:clickable="true"
         android:focusable="true"
         android:onClick="openInstagram"
+        android:text="insta"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.265"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/download"
+        android:id="@+id/downloadBtn"
         android:layout_width="102dp"
         android:layout_height="38dp"
         android:layout_marginTop="664dp"
