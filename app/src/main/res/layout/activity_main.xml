@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#E6DCBB"
+    android:background="@color/bgColor"
     tools:context=".MainActivity">
 
 
@@ -25,33 +25,36 @@
         android:layout_width="364dp"
         android:layout_height="292dp"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="16dp"
         android:layout_marginEnd="24dp"
-        android:layout_marginBottom="52dp"
+        android:layout_marginBottom="40dp"
         android:fontFamily="@font/rubik"
         android:gravity="center"
-        android:text="הצטרפו אלינו למסע להנצחת גיבורי השואה\nהתחילו את המסע בבחירת הגיבור בעמוד הבא, לאחר מכן תוכלו להפוך את הסיפור לשלכם.\nעקבו אחרי ההוראות והעלו את הסטורי לאינסטגרם לפי השלבים."
+        android:text="הצטרפו אלינו למסע להנצחת גיבורי השואה\nהתחילו את המסע בבחירת הגיבור בעמוד הבא, לאחר מכן תוכלו להפוך את הסיפור לשלכם.\nעקבו אחרי ההוראות והעלו את הסטורי לאינסטגרם לפי השלבים.\n\n אנא וודאו כי תוכנת האינסטגרם מותקים במכשירכם"
         android:textColor="#000000"
         android:textColorHighlight="#FFEB3B"
         android:textColorLink="#FFC107"
-        android:textSize="24sp"
+        android:textSize="23sp"
         app:layout_constraintBottom_toTopOf="@+id/startBtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/heroism_intro_image"
         app:layout_constraintVertical_bias="1.0" />
 
     <Button
         android:id="@+id/startBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+        android:layout_width="132dp"
+        android:layout_height="70dp"
         android:layout_marginBottom="40dp"
         android:fontFamily="@font/rubik_bold"
         android:text="בואו נתחיל"
         android:textDirection="rtl"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintVertical_bias="0.929" />
+        app:layout_constraintTop_toBottomOf="@+id/heroism_intro_image"
+        app:layout_constraintVertical_bias="0.98" />
 </androidx.constraintlayout.widget.ConstraintLayout>

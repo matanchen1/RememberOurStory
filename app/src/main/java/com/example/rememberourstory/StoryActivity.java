@@ -6,28 +6,34 @@ import android.app.Dialog;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.VideoView;
+
+import java.util.ArrayList;
 
 public class StoryActivity extends AppCompatActivity {
-    private final static String INSTRUCTIONS_STEP_2 = "הוראות לשלב 2";
+
+    private final static String INSTRUCTIONS_STEP_2 = "הסיפור של מלכה רוזנטל - שלב 2";
     private final static String INSTRUCTIONS_STEP_3 = "הוראות לשלב 3";
 
-    private final static String HEADLINE_2 = "כותרת שלב 2";
+    private final static String HEADLINE_2 = "הסיפור של מלכה רוזנטל - שלב 2";
     private final static String HEADLINE_3 = "כותרת שלב 3";
 
     private int StepIndex = 0;
 
-    private Button shareToStoryBtn;
+    private ImageView shareToStoryBtn;
     private Dialog popUpDialog;
     private ImageView backBtn;
     private TextView headLine;
     private TextView instructions;
-
+    private VideoView videoView;
+    private Uri videoUri;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,14 +49,29 @@ public class StoryActivity extends AppCompatActivity {
             Intent intent = new Intent(StoryActivity.this, MainActivity.class);
             startActivity(intent);
         });
+        videoView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                videoView.setVideoURI(videoUri);
+                videoView.start();
+            }
+        });
+
+
+
     }
+
 
     private void initVars() {
         popUpDialog = new Dialog(this);
-        shareToStoryBtn = findViewById(R.id.openInstagramBtn);
+        shareToStoryBtn = findViewById(R.id.story_share);
         headLine = findViewById(R.id.headline);
         instructions = findViewById(R.id.location_text);
         backBtn = findViewById(R.id.back_button);
+        videoView = findViewById(R.id.videoView);
+        videoUri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.video1);
+
+
     }
 
     private void manageScreenRefresh(View v) {
@@ -71,6 +92,7 @@ public class StoryActivity extends AppCompatActivity {
         } else {
             Toast.makeText(this, "Oops! You don't have Instagram App.", Toast.LENGTH_LONG).show();
             System.out.println("Oops! You don't have Instagram App.");
+            StepIndex = 0;
         }
 
     }
@@ -87,6 +109,8 @@ public class StoryActivity extends AppCompatActivity {
                     case 1:
                         headLine.setText(HEADLINE_2);
                         instructions.setText(INSTRUCTIONS_STEP_2);
+                        videoUri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.adir123);
+                        videoView.setVideoURI(videoUri);
                         break;
                     case 2:
                     default:

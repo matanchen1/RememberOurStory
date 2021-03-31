@@ -42,7 +42,7 @@
         android:layout_marginRight="135dp"
         android:layout_marginBottom="42dp"
         android:fontFamily="@font/rubik_bold"
-        android:text="סיפורו של מוישה"
+        android:text="סיפורה של מלכה"
         android:textAppearance="@style/createHeadlineAppearance"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="@+id/ellipse_59"
@@ -51,8 +51,8 @@
         app:layout_constraintTop_toTopOf="@+id/ellipse_59" />
 
 
-    <View
-        android:id="@+id/expandedBox1"
+    <VideoView
+        android:id="@+id/videoView"
         android:layout_width="220dp"
         android:layout_height="391dp"
         android:layout_alignParentLeft="true"
@@ -62,7 +62,6 @@
         android:layout_marginTop="12dp"
         android:layout_marginEnd="15dp"
         android:layout_marginRight="15dp"
-        android:background="@drawable/ic_expandedbox"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.484"
         app:layout_constraintStart_toStartOf="parent"
@@ -75,7 +74,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="19.75dp"
         android:layout_marginLeft="19.75dp"
-        android:layout_marginTop="41dp"
+        android:layout_marginTop="55dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         android:layout_marginBottom="61dp"
@@ -97,23 +96,11 @@
         android:layout_height="wrap_content"
         android:src="@drawable/ic_whiterectangle"
         android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="@+id/expandedBox1"
-        app:layout_constraintEnd_toEndOf="@+id/expandedBox1"
-        app:layout_constraintStart_toStartOf="@+id/expandedBox1"
-        app:layout_constraintTop_toTopOf="@+id/expandedBox1" />
+        app:layout_constraintBottom_toBottomOf="@+id/videoView"
+        app:layout_constraintEnd_toEndOf="@+id/videoView"
+        app:layout_constraintStart_toStartOf="@+id/videoView"
+        app:layout_constraintTop_toTopOf="@+id/videoView" />
 
-
-    <ImageView
-        android:id="@+id/line_24"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="44dp"
-        android:layout_marginRight="44dp"
-        android:background="@drawable/line_24"
-        android:visibility="gone"
-        app:layout_constraintEnd_toEndOf="@+id/timeTableRect"
-        app:layout_constraintTop_toTopOf="@+id/timeTableRect" />
 
 
     <View
@@ -127,53 +114,27 @@
         android:layout_marginLeft="18dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="15dp"
+        android:backgroundTint="@color/bgColor"
         android:layout_marginRight="15dp"
         android:background="@drawable/expandbox"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.509"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/expandedBox1" />
+        app:layout_constraintTop_toBottomOf="@id/videoView" />
 
-    <!--    <TextView-->
-    <!--        android:id="@+id/location_text"-->
-    <!--        android:layout_width="wrap_content"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:layout_alignParentLeft="true"-->
-    <!--        android:layout_alignParentTop="true"-->
-    <!--        android:layout_marginStart="19.75dp"-->
-    <!--        android:layout_marginLeft="19.75dp"-->
-    <!--        android:layout_marginTop="41dp"-->
-    <!--        android:layout_marginEnd="16dp"-->
-    <!--        android:layout_marginRight="16dp"-->
-    <!--        android:layout_marginBottom="61dp"-->
-    <!--        android:elevation="1dp"-->
-    <!--        android:fontFamily="@font/rubik"-->
-    <!--        android:gravity="center"-->
-    <!--        android:lineSpacingExtra="1sp"-->
-    <!--        android:textSize="15dp"-->
-    <!--        android:text="צפו בסרטון ושתפו אותו עם חבריכם בעזרת הכפתור מטה"-->
-    <!--        android:textAppearance="@style/text"-->
-    <!--        app:layout_constraintBottom_toBottomOf="@+id/expandBox2"-->
-    <!--        app:layout_constraintEnd_toEndOf="@+id/expandBox2"-->
-    <!--        app:layout_constraintStart_toStartOf="@+id/expandBox2"-->
-    <!--        app:layout_constraintTop_toTopOf="@+id/expandBox2" />-->
-
-
-    <Button
-        android:id="@+id/openInstagramBtn"
-        android:layout_width="102dp"
-        android:layout_height="38dp"
-        android:background="@drawable/ic_letsvolunteer"
-        android:clickable="true"
-        android:focusable="true"
-        android:onClick="openInstagram"
-        android:text="שתפו"
+    <ImageView
+        android:id="@+id/story_share"
+        style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+        android:layout_width="124dp"
+        android:layout_height="104dp"
+        android:contentDescription="TODO"
+        android:src="@drawable/share_story"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.953" />
+        app:layout_constraintTop_toBottomOf="@+id/expandBox2"
+        app:layout_constraintVertical_bias="0.974" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
