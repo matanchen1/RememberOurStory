@@ -116,6 +116,7 @@ public class StoryActivity extends AppCompatActivity {
         } else {
             TimerTask timerTaskObj = new TimerTask() {
                 public void run() {
+                    System.out.println();
                 }
             };
 
