@@ -9,11 +9,15 @@ import com.google.android.material.snackbar.Snackbar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.Toast;
 
 public class HeroesItemListActivity extends AppCompatActivity {
     private Button returnBtn;
+    private ImageView heroImage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,5 +32,16 @@ public class HeroesItemListActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        heroImage = findViewById(R.id.heroImage);
+        heroImage.bringToFront();
+        heroImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HeroesItemListActivity.this, StoryActivity.class);
+                startActivity(intent);
+            }
+
+        });
+
     }
 }
