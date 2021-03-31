@@ -25,7 +25,7 @@ public class StoryActivity extends AppCompatActivity {
     private final static String HEADLINE_2 = "הסיפור של מלכה רוזנטל - שלב 2";
     private final static String HEADLINE_3 = "כותרת שלב 3";
 
-    private ArrayList<String> =
+//    private ArrayList<String> =
     private int curVideoRes;
     private int StepIndex = 0;
     private ArrayList<Integer> videos;
