@@ -34,24 +34,23 @@ public class StoryActivity extends AppCompatActivity {
         setContentView(R.layout.activity_story);
         initVars();
 
+
         shareToStoryBtn.setOnClickListener(v -> {
             openInstagram();
             manageScreenRefresh(v);
         });
-        backBtn = findViewById(R.id.back_button);
-        backBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(StoryActivity.this, MainActivity.class);
-                startActivity(intent);
-            }
+        backBtn.setOnClickListener(v -> {
+            Intent intent = new Intent(StoryActivity.this, MainActivity.class);
+            startActivity(intent);
         });
     }
+
     private void initVars() {
         popUpDialog = new Dialog(this);
         shareToStoryBtn = findViewById(R.id.openInstagramBtn);
         headLine = findViewById(R.id.headline);
         instructions = findViewById(R.id.location_text);
+        backBtn = findViewById(R.id.back_button);
     }
 
     private void manageScreenRefresh(View v) {
@@ -63,7 +62,6 @@ public class StoryActivity extends AppCompatActivity {
             managePopUp(v);
         }
     }
-
 
 
     private void openInstagram() {
