@@ -18,6 +18,7 @@ import android.widget.VideoView;
 import java.util.ArrayList;
 import java.util.Timer;
 import java.util.TimerTask;
+import java.util.concurrent.TimeUnit;
 
 public class StoryActivity extends AppCompatActivity {
 
@@ -114,16 +115,14 @@ public class StoryActivity extends AppCompatActivity {
             Intent endIntent = new Intent(StoryActivity.this, EndActivity.class);
             startActivity(endIntent);
         } else {
-            TimerTask timerTaskObj = new TimerTask() {
-                public void run() {
-                    System.out.println();
-                }
-            };
-
-            Timer t = new Timer();
-            t.schedule(timerTaskObj, 2000L);
-            managePopUp(v);
+            try {
+                TimeUnit.SECONDS.sleep(5);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
         }
+        managePopUp(v);
+
 
     }
 
@@ -153,10 +152,10 @@ public class StoryActivity extends AppCompatActivity {
     }
 
     private void updateScreen() {
-        headLine.setText(headLines.get(StepIndex-1));
-        instruction.setText(headLines.get(StepIndex-1));
+        headLine.setText(headLines.get(StepIndex - 1));
+        instruction.setText(headLines.get(StepIndex - 1));
         //update video
-        if (StepIndex<4) {
+        if (StepIndex < 4) {
             videoUri = Uri.parse("android.resource://" + getPackageName()
                     + "/" + videos.get(StepIndex));
             videoView.setVideoURI(videoUri);

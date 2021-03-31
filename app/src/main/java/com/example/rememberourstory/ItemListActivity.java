@@ -15,7 +15,6 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class ItemListActivity extends AppCompatActivity {
-    private ImageView heroImage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
