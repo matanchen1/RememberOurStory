@@ -16,6 +16,8 @@ import android.widget.Toast;
 import android.widget.VideoView;
 
 import java.util.ArrayList;
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class StoryActivity extends AppCompatActivity {
 
@@ -26,7 +28,7 @@ public class StoryActivity extends AppCompatActivity {
     private final static String HEADLINE_2 = "הסיפור של מלכה רוזנטל - שלב 2";
     private final static String HEADLINE_3 = "כותרת שלב 3";
     private final static String HEADLINE_4 = "כותרת שלב 43";
-    private static final int FINAL_SCREEN = 5;
+    private static final int FINAL_SCREEN = 4;
 
     private ArrayList<String> instructionsArr;
     private ArrayList<String> headLines;
@@ -112,26 +114,29 @@ public class StoryActivity extends AppCompatActivity {
             Intent endIntent = new Intent(StoryActivity.this, EndActivity.class);
             startActivity(endIntent);
         } else {
+            TimerTask timerTaskObj = new TimerTask() {
+                public void run() {
+                }
+            };
+
+            Timer t = new Timer();
+            t.schedule(timerTaskObj, 2000L);
             managePopUp(v);
         }
+
     }
 
 
     private void openInstagram() {
-//        Intent launchIntent = getPackageManager().getLaunchIntentForPackage("com.instagram.android");
-//        if (launchIntent != null) {
-//            startActivity(launchIntent);
-//        } else {
-//            Toast.makeText(this, "Oops! You don't have Instagram App.", Toast.LENGTH_LONG).show();
-//            System.out.println("Oops! You don't have Instagram App.");
-//            StepIndex = 0;
-//        }
+
         ShareProcess.share(videos.get(StepIndex), ShareProcess.VIDEO, this);
 
     }
 
     public void managePopUp(View v) {
+
         Button closeBtn;
+
         popUpDialog.setContentView(R.layout.pop_up);
         closeBtn = (Button) popUpDialog.findViewById(R.id.closeBtn);
         closeBtn.setOnClickListener(new View.OnClickListener() {
@@ -149,11 +154,13 @@ public class StoryActivity extends AppCompatActivity {
     private void updateScreen() {
         headLine.setText(headLines.get(StepIndex-1));
         instruction.setText(headLines.get(StepIndex-1));
-        videoUri = Uri.parse("android.resource://" + getPackageName()
-                + "/" + videos.get(StepIndex-1));
-        videoView.setVideoURI(videoUri);
-        videoView.start();
-
+        //update video
+        if (StepIndex<4) {
+            videoUri = Uri.parse("android.resource://" + getPackageName()
+                    + "/" + videos.get(StepIndex));
+            videoView.setVideoURI(videoUri);
+            videoView.start();
+        }
     }
 
 
