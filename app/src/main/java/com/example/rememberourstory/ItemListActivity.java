@@ -21,7 +21,7 @@ public class ItemListActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_heros_item_list);
-        heroImage = findViewById(R.id.heroImage);
+        heroImage = findViewById(R.id.image2    );
 //        heroImage.bringToFront();
         heroImage.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -30,7 +30,9 @@ public class ItemListActivity extends AppCompatActivity {
                 Toast.makeText(v.getContext(), // <- Line changed
                         "The favorite list would appear on clicking this icon",
                         Toast.LENGTH_LONG).show();
+                System.out.println("121221");
             }
+
         });
 
     }
