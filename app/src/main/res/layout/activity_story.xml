@@ -42,7 +42,7 @@
         android:layout_marginRight="135dp"
         android:layout_marginBottom="42dp"
         android:fontFamily="@font/rubik_bold"
-        android:text="סיפורה של מלכה"
+        android:text=" הסיפור של מלכה רוזנטל"
         android:textAppearance="@style/createHeadlineAppearance"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="@+id/ellipse_59"
@@ -102,39 +102,37 @@
         app:layout_constraintTop_toTopOf="@+id/videoView" />
 
 
-
     <View
         android:id="@+id/expandBox2"
-        android:layout_width="327dp"
-        android:layout_height="70dp"
+        android:layout_width="331dp"
+        android:layout_height="60dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="18dp"
         android:layout_marginLeft="18dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="15dp"
-        android:backgroundTint="@color/bgColor"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="12dp"
         android:layout_marginRight="15dp"
         android:background="@drawable/expandbox"
+        android:backgroundTint="@color/bgColor"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintHorizontal_bias="0.44"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/videoView" />
 
     <ImageView
         android:id="@+id/story_share"
         style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
-        android:layout_width="124dp"
-        android:layout_height="104dp"
+        android:layout_width="109dp"
+        android:layout_height="105dp"
         android:contentDescription="TODO"
         android:src="@drawable/share_story"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/expandBox2"
-        app:layout_constraintVertical_bias="0.974" />
+        app:layout_constraintVertical_bias="1.0" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

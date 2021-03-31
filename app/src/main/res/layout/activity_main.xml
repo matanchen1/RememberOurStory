@@ -8,25 +8,24 @@
     tools:context=".MainActivity">
 
 
-
     <ImageView
         android:id="@+id/heroism_intro_image"
-        android:layout_width="411dp"
-        android:layout_height="166dp"
+        android:layout_width="405dp"
+        android:layout_height="194dp"
         android:src="@drawable/logo_remember"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.123" />
+        app:layout_constraintVertical_bias="0.056" />
 
     <TextView
         android:layout_width="364dp"
         android:layout_height="292dp"
         android:layout_marginStart="24dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginBottom="40dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="10dp"
         android:fontFamily="@font/rubik"
         android:gravity="center"
         android:text="הצטרפו אלינו למסע להנצחת גיבורי השואה\nהתחילו את המסע בבחירת הגיבור בעמוד הבא, לאחר מכן תוכלו להפוך את הסיפור לשלכם.\nעקבו אחרי ההוראות והעלו את הסטורי לאינסטגרם לפי השלבים.\n\n אנא וודאו כי תוכנת האינסטגרם מותקים במכשירכם"
@@ -39,7 +38,9 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/heroism_intro_image"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="1.0"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="20dp" />
 
     <Button
         android:id="@+id/startBtn"
@@ -56,5 +57,5 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/heroism_intro_image"
-        app:layout_constraintVertical_bias="0.98" />
+        app:layout_constraintVertical_bias="1.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>
