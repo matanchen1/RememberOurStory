@@ -18,6 +18,7 @@ import android.widget.Toast;
 public class HeroesItemListActivity extends AppCompatActivity {
     private Button returnBtn;
     private ImageView heroImage;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,16 +32,13 @@ public class HeroesItemListActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        heroImage = findViewById(R.id.image2    );
-//        heroImage.bringToFront();
+        heroImage = findViewById(R.id.heroImage);
+        heroImage.bringToFront();
         heroImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.d("== My activity ===","OnClick is called");
-                Toast.makeText(v.getContext(), // <- Line changed
-                        "The favorite list would appear on clicking this icon",
-                        Toast.LENGTH_LONG).show();
-                System.out.println("121221");
+                Intent intent = new Intent(HeroesItemListActivity.this, StoryActivity.class);
+                startActivity(intent);
             }
 
         });
