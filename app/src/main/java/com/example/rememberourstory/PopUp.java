@@ -15,10 +15,7 @@ public class PopUp {
         Button closeBtn;
         Dialog popUpDialog = new Dialog(context);
         popUpDialog.setContentView(R.layout.pop_up);
-        txtClose = (TextView) popUpDialog.findViewById(R.id.txtclose);
-        txtClose.setText("X");
         closeBtn = (Button) popUpDialog.findViewById(R.id.closeBtn);
-        txtClose.setOnClickListener(v1 -> popUpDialog.dismiss());
         closeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
