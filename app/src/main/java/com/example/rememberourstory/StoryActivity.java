@@ -21,9 +21,12 @@ public class StoryActivity extends AppCompatActivity {
 
     private final static String INSTRUCTIONS_STEP_2 = "הסיפור של מלכה רוזנטל - שלב 2";
     private final static String INSTRUCTIONS_STEP_3 = "הוראות לשלב 3";
+    private final static String INSTRUCTIONS_STEP_4 = "הוראות לשלב 4";
 
     private final static String HEADLINE_2 = "הסיפור של מלכה רוזנטל - שלב 2";
     private final static String HEADLINE_3 = "כותרת שלב 3";
+    private final static String HEADLINE_4 = "כותרת שלב 43";
+    private static final int FINAL_SCREEN = 5;
 
     private ArrayList<String> instructionsArr;
     private ArrayList<String> headLines;
@@ -39,6 +42,7 @@ public class StoryActivity extends AppCompatActivity {
     private TextView instruction;
     private VideoView videoView;
     private Uri videoUri;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -63,7 +67,6 @@ public class StoryActivity extends AppCompatActivity {
         });
 
 
-
     }
 
 
@@ -74,23 +77,41 @@ public class StoryActivity extends AppCompatActivity {
         instruction = findViewById(R.id.location_text);
         backBtn = findViewById(R.id.back_button);
         videoView = findViewById(R.id.videoView);
-        videos = new ArrayList<>();
-        videos.add(R.raw.video1);
-        videos.add(R.raw.video1);
+        initArr();
+
 
         curVideoRes = R.raw.video1;
-        videoUri = Uri.parse("android.resource://" + getPackageName() + "/" + curVideoRes);
+        videoUri = Uri.parse("android.resource://" + getPackageName() + "/" + videos.get(0));
 
 
     }
 
+    private void initArr() {
+        videos = new ArrayList<>();
+        videos.add(R.raw.malka4);
+        videos.add(R.raw.malka5);
+        videos.add(R.raw.malka6);
+        videos.add(R.raw.malka7);
+
+
+        instructionsArr = new ArrayList<>();
+        instructionsArr.add(INSTRUCTIONS_STEP_2);
+        instructionsArr.add(INSTRUCTIONS_STEP_3);
+        instructionsArr.add(INSTRUCTIONS_STEP_4);
+
+        headLines = new ArrayList<>();
+        headLines.add(HEADLINE_2);
+        headLines.add(HEADLINE_3);
+        headLines.add(HEADLINE_4);
+    }
+
+
     private void manageScreenRefresh(View v) {
-        if (++StepIndex == 3) {
+        if (++StepIndex == FINAL_SCREEN) {
+            openInstagram();
             Intent endIntent = new Intent(StoryActivity.this, EndActivity.class);
             startActivity(endIntent);
-            return;
         } else {
-
             managePopUp(v);
         }
     }
@@ -105,7 +126,7 @@ public class StoryActivity extends AppCompatActivity {
 //            System.out.println("Oops! You don't have Instagram App.");
 //            StepIndex = 0;
 //        }
-        ShareProcess.share(R.raw.video1,ShareProcess.VIDEO,this);
+        ShareProcess.share(videos.get(StepIndex), ShareProcess.VIDEO, this);
 
     }
 
@@ -117,26 +138,22 @@ public class StoryActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 popUpDialog.dismiss();
-                switch (StepIndex) {
-                    case 1:
-                        headLine.setText(HEADLINE_2);
-                        instruction.setText(INSTRUCTIONS_STEP_2);
-                        videoUri = Uri.parse("android.resource://" + getPackageName()
-                                + "/" + videos.get(StepIndex));
-                        videoView.setVideoURI(videoUri);
-                        videoView.setVideoURI(videoUri);
-                        break;
-                    case 2:
-                    default:
-                        headLine.setText(HEADLINE_3);
-                        instruction.setText(INSTRUCTIONS_STEP_3);
-                        break;
-                }
+                updateScreen();
             }
         });
 
         popUpDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.BLUE));
         popUpDialog.show();
+    }
+
+    private void updateScreen() {
+        headLine.setText(headLines.get(StepIndex-1));
+        instruction.setText(headLines.get(StepIndex-1));
+        videoUri = Uri.parse("android.resource://" + getPackageName()
+                + "/" + videos.get(StepIndex-1));
+        videoView.setVideoURI(videoUri);
+        videoView.start();
+
     }
 
 
