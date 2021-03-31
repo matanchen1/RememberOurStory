@@ -25,7 +25,10 @@ public class StoryActivity extends AppCompatActivity {
     private final static String HEADLINE_2 = "הסיפור של מלכה רוזנטל - שלב 2";
     private final static String HEADLINE_3 = "כותרת שלב 3";
 
-//    private ArrayList<String> =
+    private ArrayList<String> instructionsArr;
+    private ArrayList<String> headLines;
+
+
     private int curVideoRes;
     private int StepIndex = 0;
     private ArrayList<Integer> videos;
@@ -33,7 +36,7 @@ public class StoryActivity extends AppCompatActivity {
     private Dialog popUpDialog;
     private ImageView backBtn;
     private TextView headLine;
-    private TextView instructions;
+    private TextView instruction;
     private VideoView videoView;
     private Uri videoUri;
     @Override
@@ -68,9 +71,10 @@ public class StoryActivity extends AppCompatActivity {
         popUpDialog = new Dialog(this);
         shareToStoryBtn = findViewById(R.id.story_share);
         headLine = findViewById(R.id.headline);
-        instructions = findViewById(R.id.location_text);
+        instruction = findViewById(R.id.location_text);
         backBtn = findViewById(R.id.back_button);
         videoView = findViewById(R.id.videoView);
+        videos = new ArrayList<>();
         videos.add(R.raw.video1);
         videos.add(R.raw.video1);
 
@@ -116,15 +120,16 @@ public class StoryActivity extends AppCompatActivity {
                 switch (StepIndex) {
                     case 1:
                         headLine.setText(HEADLINE_2);
-                        instructions.setText(INSTRUCTIONS_STEP_2);
+                        instruction.setText(INSTRUCTIONS_STEP_2);
                         videoUri = Uri.parse("android.resource://" + getPackageName()
                                 + "/" + videos.get(StepIndex));
+                        videoView.setVideoURI(videoUri);
                         videoView.setVideoURI(videoUri);
                         break;
                     case 2:
                     default:
                         headLine.setText(HEADLINE_3);
-                        instructions.setText(INSTRUCTIONS_STEP_3);
+                        instruction.setText(INSTRUCTIONS_STEP_3);
                         break;
                 }
             }
