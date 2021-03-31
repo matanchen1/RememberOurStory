@@ -25,8 +25,10 @@ public class StoryActivity extends AppCompatActivity {
     private final static String HEADLINE_2 = "הסיפור של מלכה רוזנטל - שלב 2";
     private final static String HEADLINE_3 = "כותרת שלב 3";
 
+    private ArrayList<String> =
+    private int curVideoRes;
     private int StepIndex = 0;
-
+    private ArrayList<Integer> videos;
     private ImageView shareToStoryBtn;
     private Dialog popUpDialog;
     private ImageView backBtn;
@@ -69,7 +71,11 @@ public class StoryActivity extends AppCompatActivity {
         instructions = findViewById(R.id.location_text);
         backBtn = findViewById(R.id.back_button);
         videoView = findViewById(R.id.videoView);
-        videoUri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.video1);
+        videos.add(R.raw.video1);
+        videos.add(R.raw.video1);
+
+        curVideoRes = R.raw.video1;
+        videoUri = Uri.parse("android.resource://" + getPackageName() + "/" + curVideoRes);
 
 
     }
@@ -80,20 +86,22 @@ public class StoryActivity extends AppCompatActivity {
             startActivity(endIntent);
             return;
         } else {
+
             managePopUp(v);
         }
     }
 
 
     private void openInstagram() {
-        Intent launchIntent = getPackageManager().getLaunchIntentForPackage("com.instagram.android");
-        if (launchIntent != null) {
-            startActivity(launchIntent);
-        } else {
-            Toast.makeText(this, "Oops! You don't have Instagram App.", Toast.LENGTH_LONG).show();
-            System.out.println("Oops! You don't have Instagram App.");
-            StepIndex = 0;
-        }
+//        Intent launchIntent = getPackageManager().getLaunchIntentForPackage("com.instagram.android");
+//        if (launchIntent != null) {
+//            startActivity(launchIntent);
+//        } else {
+//            Toast.makeText(this, "Oops! You don't have Instagram App.", Toast.LENGTH_LONG).show();
+//            System.out.println("Oops! You don't have Instagram App.");
+//            StepIndex = 0;
+//        }
+        ShareProcess.share(R.raw.video1,ShareProcess.VIDEO,this);
 
     }
 
@@ -109,7 +117,8 @@ public class StoryActivity extends AppCompatActivity {
                     case 1:
                         headLine.setText(HEADLINE_2);
                         instructions.setText(INSTRUCTIONS_STEP_2);
-                        videoUri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.adir123);
+                        videoUri = Uri.parse("android.resource://" + getPackageName()
+                                + "/" + videos.get(StepIndex));
                         videoView.setVideoURI(videoUri);
                         break;
                     case 2:
