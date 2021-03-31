@@ -13,4 +13,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="quantum_black">#151515</color>
     <color name="button_text_color">#151515</color>
+    <color name="bananaYellow">#EEE6A0</color>
 </resources>
