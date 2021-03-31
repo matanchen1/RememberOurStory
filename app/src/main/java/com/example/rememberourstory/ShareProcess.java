@@ -17,17 +17,17 @@ public class ShareProcess {
     public final static int VIDEO = 0;
     public final static int IMAGE = 1;
 
-    public static void share(int resID, int type, Activity currentActivity){
-        if(!isUserHaveInstagram(currentActivity.getPackageManager())){
+    public static void share(int resID, int type, Activity currentActivity) {
+        if (!isUserHaveInstagram(currentActivity.getPackageManager())) {
             noInstagram(currentActivity);
             return;
         }
         Uri resUri;
         String MIMEtype = "";
-        if(type == VIDEO){
+        if (type == VIDEO) {
             resUri = Uri.parse("android.resource://" + currentActivity.getPackageName() + "/" + resID);
             MIMEtype = "video/mp4";
-        }else{
+        } else {
             resUri = Uri.parse("android.resource://" + currentActivity.getPackageName() + "/" + resID);
             MIMEtype = "image/jpeg";
         }
@@ -42,20 +42,21 @@ public class ShareProcess {
     }
 
 
-    public static void shareVideo(int videoID, Activity currentActivity){
+    public static void shareVideo(int videoID, Activity currentActivity) {
         Intent launchIntent = currentActivity.getPackageManager().getLaunchIntentForPackage("com.instagram.android");
         if (launchIntent == null) {
 
             return;
         }
-        Uri uriVid =  Uri.parse("android.resource://" + currentActivity.getPackageName() + "/" + videoID);
+        Uri uriVid = Uri.parse("android.resource://" + currentActivity.getPackageName() + "/" + videoID);
         Intent sendIntent = new Intent(Intent.ACTION_SEND);
         sendIntent.setType("video/mp4");
         sendIntent.putExtra(Intent.EXTRA_SUBJECT, "Video");
         sendIntent.putExtra(Intent.EXTRA_STREAM, uriVid);
         currentActivity.startActivity(Intent.createChooser(sendIntent, "Share To Story:"));
     }
-    public static void shareImage(int imageID, Activity currentActivity){
+
+    public static void shareImage(int imageID, Activity currentActivity) {
         Intent launchIntent = currentActivity.getPackageManager().getLaunchIntentForPackage("com.instagram.android");
         if (launchIntent == null) {
             Toast.makeText(currentActivity, "Oops! You don't have Instagram App.", Toast.LENGTH_LONG).show();
@@ -72,6 +73,7 @@ public class ShareProcess {
         sendIntent.putExtra(Intent.EXTRA_STREAM, imageURI);
         currentActivity.startActivity(Intent.createChooser(sendIntent, "ASDSADASDASDASDASD"));
     }
+
     private static boolean isUserHaveInstagram(PackageManager packageManager) {
         try {
             packageManager.getPackageInfo("com.instagram.android", 0);
