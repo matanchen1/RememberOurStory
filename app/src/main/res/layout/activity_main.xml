@@ -28,7 +28,7 @@
         android:layout_marginBottom="10dp"
         android:fontFamily="@font/rubik"
         android:gravity="center"
-        android:text="הצטרפו אלינו למסע להנצחת גיבורי השואה.\nהתחילו את המסע בבחירת הגיבור בעמוד הבא, לאחר מכן תוכלו להפוך את הסיפור לשלכם.\nעקבו אחרי ההוראות והעלו את הסטורי לאינסטגרם לפי השלבים,\n\בסיום כל שלב חזרו למסך האפליקציה כדי להמשיך לשלב הבא.\n אנא וודאו כי תוכנת האינסטגרם מותקנת במכשירכם."
+        android:text="הצטרפו אלינו למסע להנצחת גיבורי השואה.\nהתחילו את המסע בבחירת הגיבור בעמוד הבא, לאחר מכן תוכלו להפוך את הסיפור לשלכם.\nעקבו אחרי ההוראות והעלו את הסטורי לאינסטגרם לפי השלבים,\nוכמובן אל תשכחו לתייג\n @Brave_together__makechange "
         android:textColor="#000000"
         android:textColorHighlight="#FFEB3B"
         android:textColorLink="#FFC107"
@@ -57,5 +57,21 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/heroism_intro_image"
+        app:layout_constraintVertical_bias="0.951" />
+
+    <TextView
+
+        android:layout_width="408dp"
+        android:layout_height="44dp"
+        android:fontFamily="@font/rubik"
+        android:gravity="center"
+        android:text=" אנא וודאו כי תוכנת האינסטגרם מותקנת במכשירכם"
+        android:textColor="#000000"
+        android:textColorHighlight="#FFEB3B"
+        android:textColorLink="#FFC107"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/heroism_intro_image"
         app:layout_constraintVertical_bias="1.0" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
