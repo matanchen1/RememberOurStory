@@ -36,7 +36,7 @@ public class StoryActivity extends AppCompatActivity {
     private final static String HEADLINE_4 = "הסיפור של מלכה רוזנטל ז\"ל - 4";
     private final static String HEADLINE_5 = "הסיפור של מלכה רוזנטל ז\"ל - 5";
 
-    private static final int FINAL_SCREEN = 4;
+    private static final int FINAL_SCREEN = 5;
 
     private ArrayList<String> instructionsArr;
     private ArrayList<String> headLines;
@@ -132,6 +132,7 @@ public class StoryActivity extends AppCompatActivity {
     private void manageScreenRefresh(View v) {
         StepIndex++;
         if (StepIndex == FINAL_SCREEN) {
+            StepIndex--;
             openInstagram(ShareProcess.VIDEO);
             Intent endIntent = new Intent(StoryActivity.this, EndActivity.class);
             startActivity(endIntent);
