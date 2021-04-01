@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/constraint_layout"
     android:layout_width="match_parent"
+    android:background="@color/bgColor"
     android:layout_height="match_parent">
 
     <View
@@ -131,8 +132,6 @@
         android:layout_marginStart="18dp"
         android:layout_marginLeft="18dp"
         android:layout_marginTop="20dp"
-        android:layout_marginEnd="5dp"
-        android:layout_marginRight="15dp"
         android:background="@drawable/expandbox"
         android:backgroundTint="@color/bgColor"
         android:foregroundGravity="center"
@@ -147,7 +146,7 @@
         android:layout_width="105dp"
         android:layout_height="86dp"
         android:contentDescription="TODO"
-        android:src="@drawable/share_story"
+        android:src="@drawable/add_to_story_btn"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
